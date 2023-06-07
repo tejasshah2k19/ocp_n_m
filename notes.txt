@@ -1,0 +1,48 @@
+
+
+Consumer<T>  ---> accept(T t) -> pass T argument and perform operation	 :: no return type 
+BiConsumer<X,Y>  ---> accept(X,Y) -> perform operation on X,Y 			 ::  no return type 
+
+Supplier 
+
+
+Function 
+
+
+Predicate 
+
+
+
+BiFunction(X,Y,Z)
+		BinaryOperator 
+
+		
+stream method - stream api 
+
+filter 
+forEach 
+
+calculation method 
+
+maptoint
+
+	max min sum average 
+
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	

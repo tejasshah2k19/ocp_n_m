@@ -1,0 +1,50 @@
+1) composition
+2) hashcode
+3)anonymous inner class
+4) Lambda Function
+5) generic class
+6) ArrayDeque objects
+7) java.util.Comparator and java.lang.Comparable interfaces
+8) Streams and Filters
+9) Iterate using forEach methods of Streams and List
+10) Stream interface and Stream pipeline
+11) Filter a collection by using lambda expressions
+12) Use method references with Streams
+13) Use the built-in interfaces included in the java.util.function package such as Predicate, Consumer, Function, and Supplier
+14) primitive versions of functional interfaces
+15) binary versions of functional interfaces
+16) UnaryOperator interface
+17) peek() and map() methods including primitive versions of the map() method
+18) Search for data by using search methods of the Stream classes including findFirst,findAny, anyMatch, allMatch,noneMatch
+19) Optional class
+20) Stream data methods and calculation methods
+21) Stream API
+22) Collectors class
+23) flatMap() methods 
+24) Autoclose resources
+25) try-with-resources statement
+26) invariants
+27) assertions
+28) Instant, Period, and Duration
+29) Work with dates and times across timezones and manage changes resulting fromdaylight savings including Format date and times values
+30) TemporalUnit
+
+31) Path interface
+32) manage metadata of a file or directory
+33) Stream API with NIO.2
+
+
+34) worker threads using Runnable, Callable and use an ExecutorService to concurrently execute tasks
+36) java.util.concurrent collections and classes including CyclicBarrier and CopyOnWriteArrayList
+35) potential threading problems among deadlock, starvation, livelock, and race conditions
+
+37) parallel Fork/Join Framework
+
+38) parallel Streams including reduction, decomposition, merging processes,pipelines and performance.
+39) JDBC API  Driver, Connection, Statement
+40) components required to connect to a database using the DriverManager class including the JDBC URL
+41) creating statements,returning result sets, iterating through the results, and properly closing result sets,statements, and connections
+
+42) Locale object
+43) Properties file
+44) Build a resource bundle for each locale and load a resource bundle in an application
