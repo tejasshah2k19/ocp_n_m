@@ -23,14 +23,39 @@ public class Lambda {
 		};
 		hp.play();
 		hp.myplay();
-		
-		
 
-		Player vp = () ->  System.out.println("TP:play()");
+		Player vp = () -> System.out.println("TP:play()");
 		vp.play();
-		
-		
+
 		Player.generalPaly();
+
+		String str = "ram";
+		MethodArg m = (data) -> {
+			String data2 = "";
+			return "ram";
+		};
+		MethodArg x = (data) -> data;
+		MethodArg y = (data) -> {
+			return data;
+		};
+		MethodArg z = (String data) -> {
+			return data;
+		};
+
+		TokenGenerator otp = () -> {
+			return "1234";
+		};
+
+		TokenGenerator accessToken = () -> {
+			return "a1d2sdff3t4t";
+		};
+
+		System.out.println(otp.generateToken());
+		System.out.println(accessToken.generateToken());
+
+//		Supplier< >  		general 
+//		DoubleSupplier		double 
+	
 	}
 }
 
@@ -44,9 +69,11 @@ class AThread implements Runnable {
 @FunctionalInterface
 interface Player {
 	void play();// public abstract
+
 	default void myplay() {
 		System.out.println("myplay()");
 	}
+
 	static void generalPaly() {
 		System.out.println("generalPlay");
 	}
@@ -60,4 +87,12 @@ class Cricketer implements Player {
 	public void play() {
 		System.out.println("Circketer::Play");
 	}
+}
+
+interface MethodArg {
+	String add(String str);
+}
+
+interface TokenGenerator {
+	String generateToken();
 }

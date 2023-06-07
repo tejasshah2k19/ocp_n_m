@@ -3,6 +3,8 @@ package ocp_n_m;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.function.BinaryOperator;
+import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 public class StreamDemo {
@@ -43,19 +45,54 @@ public class StreamDemo {
 		System.out.println("ForEach");
 		products.forEach(p -> System.out.println(p.getName()));
 
+		//
 		products.stream().forEach(p -> System.out.println(p.getName()));
 
 		System.out.println(">12000");
 		// filter the products who's prize is > 12000 and then print name
 		products.stream().filter(p -> p.getPrice() > 12000).forEach(p -> System.out.println(p.getName()));
-		
-		//collect()
+
+		// collect()
 		List<Product> products12k = products.stream().filter(p -> p.getPrice() > 12000).collect(Collectors.toList());
+
+		// Predicate --
+		//
+		// Function
+
+		// Consumer --
+		//
+		// Supplier
+		//
+
+		// increment the product prize by 1000 rs
+
+		List<Product> newPriceProduct = products.stream().map(p -> {
+			p.price = p.price + 1000;
+			return p;
+		}).collect(Collectors.toList());
+		System.out.println("Function price using map");
+		newPriceProduct.forEach(d -> System.out.println(d.getPrice()));
+
+		System.out.println("Function price using map");
+		List<Long> newPriceProductPrice = products.stream().map(p -> p.price + 1000).collect(Collectors.toList());
+		newPriceProductPrice.forEach(d -> System.out.println(d));
+
+		// data -> modification -> return
+
+		Supplier<Double> randomGenerator = () -> Math.random();
+
+		System.out.println(randomGenerator.get()); // random Value
+
+		Runnable rr = () -> {
+			System.out.println("This is run method");
+		};
+		rr.run();
 
 	}
 }
 
-class Product {
+class Product implements Comparable<Product> {
+
 	Integer productId;
 	String name;
 	Long price;
@@ -93,4 +130,27 @@ class Product {
 		this.category = category;
 	}
 
+//	@Override
+//	public int compareTo(Product o) {// p2
+//		if (this.price > o.price) {
+//			return 1;
+//		} else if (this.price < o.price) {
+//			return -1;
+//
+//		}
+//		return 0;
+//	}
+	// p1 p2 p3
+	// p1.compareTo(p2) -> 1 p1 > , -1 p2 > , 0 p1 == p2
+
+	@Override
+	public int compareTo(Product o) {// p2
+		if (this.price > o.price) {
+			return -1;
+		} else if (this.price < o.price) {
+			return 1;
+
+		}
+		return 0;
+	}
 }
