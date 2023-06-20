@@ -41,6 +41,10 @@ public class LCDemo {
 		System.out.println(d7.format(d));
 		
 		
+		DateFormat d8 = DateFormat.getDateInstance(DateFormat.SHORT,us); // format
+		System.out.println(d8.format(d));
+		
+		
 		
 	}
 }

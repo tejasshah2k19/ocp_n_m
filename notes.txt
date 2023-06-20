@@ -29,8 +29,60 @@ maptoint
 	max min sum average 
 
 
+------------------------------------------------------	
 	
-	
+List Queue Map Set 
+
+ArrayList , Pq, HasMap -> non synchronized 
+
+Vector,Stack, -> Sync --> locking -> performance 
+
+
+all class of concurrent collections are synchronized in behaviour. 
+--high performance -> due to locking mechanism 
+ConcurrentHashMap 
+CopyOnWriteArrayList 
+
+
+you can not add element when you iterate syn collection  class ->
+		Vector , Stack , SynSet 
+but in concurrentCollection you can add when you read --> 
+		
+		
+ArrayList				CoWArrayList 
+read					read 
+read -> add X			read -> add    Allow 
+read -> delete allow 	read -> delete X 
+faster					slower 
+		
+
+--------------------------------------------------------------------------
+
+
+ExecutorService --> 
+			pool 
+					single thread
+					fix thread 
+					cached thread
+					schedule thread 
+				
+fork/join ---> work steal algorithm 
+					  t
+				t1			t2 
+			t1.1 t1.2	t2.1 t2.2 
+					
+fork -> join 
+					
+					
+
+		 
+		 
+		
+		
+		 
+
+
+
 
 
 
